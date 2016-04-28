@@ -1,0 +1,17 @@
+<%= form_for(@home_battery) do |f| %>
+  <% if @home_battery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home_battery.errors.count, "error") %> prohibited this home_battery from being saved:</h2>
+
+      <ul>
+      <% @home_battery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
